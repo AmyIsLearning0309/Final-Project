@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "cOdiNG";
+    line-height: 2;
+}
+
+a:link {
+  color: rgb(154, 181, 169);
+}
+
+a:link:hover {
+  color: rgb(126, 147, 138);
+}
+
+
+h1 {
+    font-size: 30px;
+}
+
+@font-face {
+    font-family: "cOdiNG";
+    src: url("assets/cOdiNGVF.ttf");
+}
+
+.marquee {
+  overflow: hidden; /* Hides anything that goes beyond the box */
+  position: relative; /* Ensures the marquee content is positioned relative to this container */
+  width: 100%; /* Full width of the container */
+  height: 30px; /* Set the height of the marquee */
+  background-color: rgb(255, 255, 255); /* Background color of the marquee */
+  color: rgb(154, 181, 169); /* Text color */
+}
+
+.marquee-content {
+  position: absolute; /* Absolute position within the marquee div */
+  white-space: nowrap; /* Prevents the text from wrapping */
+  will-change: transform; /* Optimizes animations */
+  animation: marquee 10s linear infinite; /* Adjust the time for different speeds */
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%); /* Start from the right */
+  }
+  to {
+    transform: translateX(-100%); /* End at the far left */
+  }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    padding: 5px;
+}
+.grid div {
+    height: auto;
+    padding: 10px;
+    border: 1px solid rgb(154, 181, 169);
+    text-align: center;
+}
+
+.grid div:hover {
+  background-color: transparent !important;
+}
+
+.flex-parent {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    border: 1px solid rgb(134, 160, 148);
+}
+.flex-child {
+    padding: 0;
+    flex-grow: 1;
+    text-align: center;
+    height: 20px;
+    border: 1px solid rgb(154, 181, 169);
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(154, 181, 169);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 5px;
+}
+  
+.scroll-item {
+    flex: 0 0 auto;
+    width: 630px;
+    height: 450px;
+    border: 1px solid rgb(154, 181, 169);
+    background-color: rgb(132, 156, 145);
+    margin-right: 5px;
+}
+
+.scroll-item:hover {
+  background-color: transparent;
+  transition-duration: 1s;
+}
+
+.image-wall {
+  text-align: center;
+}
+
+video {
+  max-width: 100vw;
+  max-height: 100vh;
+}
