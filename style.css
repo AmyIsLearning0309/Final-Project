@@ -105,6 +105,13 @@ h1 {
     border: 1px dotted white;
     text-align: center;
   }
+
+  .flex-child {
+    font-size: 5px !important;
+  }
+  .flex-child a {
+    font-size: 5px !important;
+  }
 }
 
 .grid {
