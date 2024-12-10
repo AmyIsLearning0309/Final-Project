@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styledraw.css"> 
+</head>
+<body>
+    <div class="glow-cursor"></div>
+    <div class="spotlight"></div>
+    <div class="grid-draw">
+        <div>
+            <img src="https://cdn.myportfolio.com/07675f5e-2094-4851-9fce-7fdcb31dee4d/d69db6a2-5919-43a4-8ee7-8128ff74feb6_rw_1920.jpeg?h=c4312d2ab1fcd9083c3b426c6efb0163" alt="Image 1">
+        </div>
+        <div>
+            <div style="height: 30vh;"></div>
+            <div class="description1">
+                <p>Drawing in Space</p>
+                <p>February 2023</p>
+                <p>This is a three dimensional sculpture done with wire to replicate a life-sized wearable shoe. It aims on capturing the essence of the shoe design in a creative and expressive way. The shoe is designed by brand NIKE, named Nike M2K Tekno.</p>
+            </div>
+            <div style="height: 10vh;"></div>
+            <div class="description">
+                <a href="index.html" style="color: rgb(255, 255, 255);">Go Back</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const glowCursor = document.querySelector('.glow-cursor');
+        const spotlight = document.querySelector('.spotlight');
+
+        document.addEventListener('mousemove', (e) => {
+            // Move the glow cursor
+            glowCursor.style.left = `${e.clientX}px`;
+            glowCursor.style.top = `${e.clientY}px`;
+
+            // Move the spotlight
+            spotlight.style.left = `${e.clientX}px`;
+            spotlight.style.top = `${e.clientY}px`;
+        });
+    </script>
+</body>
+</html>

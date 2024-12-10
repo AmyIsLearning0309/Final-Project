@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styledraw.css"> 
+</head>
+<body>
+    <div class="glow-cursor"></div>
+    <div class="spotlight"></div>
+    <div class="grid-draw">
+        <div>
+            <img src="https://cdn.myportfolio.com/07675f5e-2094-4851-9fce-7fdcb31dee4d/ad30b026-cade-457b-a21c-f488f71af16b_rw_1920.jpeg?h=f12c398bab83a96f26b33f95655508be" alt="Image 1">
+        </div>
+        <div>
+            <div style="height: 30vh;"></div>
+            <div class="description1">
+                <p>Body is Fragile</p>
+                <p>November 2022</p>
+                <p>My torso sculpture made of tissue paper aims to raise awareness of the fragility of the human body and the importance of self-care and self-love. The delicate material symbolizes vulnerability, while the white string stitches represent irreversible damage to the body. The shape of the torso, inspired by water droplets, embodies the feminine idealized body type, emphasizing the harmful effects of prioritizing physical appearance over health. Placed in the centre of the frame, the sculpture serves as a reminder to prioritize self-care and self-love over societal beauty standards.</p>
+            </div>
+            <div style="height: 10vh;"></div>
+            <div class="description">
+                <a href="index.html" style="color: rgb(255, 255, 255);">Go Back</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const glowCursor = document.querySelector('.glow-cursor');
+        const spotlight = document.querySelector('.spotlight');
+
+        document.addEventListener('mousemove', (e) => {
+            // Move the glow cursor
+            glowCursor.style.left = `${e.clientX}px`;
+            glowCursor.style.top = `${e.clientY}px`;
+
+            // Move the spotlight
+            spotlight.style.left = `${e.clientX}px`;
+            spotlight.style.top = `${e.clientY}px`;
+        });
+    </script>
+</body>
+</html>

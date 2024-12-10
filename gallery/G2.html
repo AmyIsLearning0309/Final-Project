@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styledraw.css"> 
+</head>
+<body>
+    <div class="glow-cursor"></div>
+    <div class="spotlight"></div>
+    <div class="grid-draw">
+        <div>
+            <img src="https://cdn.myportfolio.com/07675f5e-2094-4851-9fce-7fdcb31dee4d/81b270ee-5dc0-4c0b-ba27-5c70bb7b063f_rw_1920.JPEG?h=00b1b9228064498fba0364fad1431edc" alt="Image 1">
+        </div>
+        <div>
+            <div style="height: 30vh;"></div>
+            <div class="description1">
+                <p>ELectric Pipa</p>
+                <p>May 2023</p>
+                <p>This artwork represents a fusion of eastern and western instrument design, drawing inspiration primarily from the traditional Chinese lute, the pipa. The structure, fingerboard, and frets of the pipa serve as the main references for this creation. However, it also incorporates elements from western bass guitar design, such as the use of electronic pickups. By blending these diverse cultural influences, the artwork reimagines traditional instruments as futuristic entities, exploring new possibilities and expanding our understanding of musical instruments.</p>
+            </div>
+            <div style="height: 10vh;"></div>
+            <div class="description">
+                <a href="index.html" style="color: rgb(255, 255, 255);">Go Back</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const glowCursor = document.querySelector('.glow-cursor');
+        const spotlight = document.querySelector('.spotlight');
+
+        document.addEventListener('mousemove', (e) => {
+            // Move the glow cursor
+            glowCursor.style.left = `${e.clientX}px`;
+            glowCursor.style.top = `${e.clientY}px`;
+
+            // Move the spotlight
+            spotlight.style.left = `${e.clientX}px`;
+            spotlight.style.top = `${e.clientY}px`;
+        });
+    </script>
+</body>
+</html>

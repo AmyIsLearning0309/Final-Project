@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styledraw.css"> 
+</head>
+<body>
+    <div class="glow-cursor"></div>
+    <div class="spotlight"></div>
+    <div class="grid-draw">
+        <div>
+            <img src="https://cdn.myportfolio.com/07675f5e-2094-4851-9fce-7fdcb31dee4d/cfb448d2-f6d9-46dd-89ec-1ed583906b25_rw_1920.jpeg?h=bf28046187c56b2ee8cfe7cb920e10c5" alt="Image 1">
+        </div>
+        <div>
+            <div style="height: 30vh;"></div>
+            <div class="description1">
+                <p>Biomimicry Container</p>
+                <p>April 2023</p>
+            </div>
+            <div style="height: 10vh;"></div>
+            <div class="description">
+                <a href="index.html" style="color: rgb(255, 255, 255);">Go Back</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const glowCursor = document.querySelector('.glow-cursor');
+        const spotlight = document.querySelector('.spotlight');
+
+        document.addEventListener('mousemove', (e) => {
+            // Move the glow cursor
+            glowCursor.style.left = `${e.clientX}px`;
+            glowCursor.style.top = `${e.clientY}px`;
+
+            // Move the spotlight
+            spotlight.style.left = `${e.clientX}px`;
+            spotlight.style.top = `${e.clientY}px`;
+        });
+    </script>
+</body>
+</html>

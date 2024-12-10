@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylegallery.css"> 
+</head>
+<body style="background-image: url('../image/Drawing.svg'); background-size: cover; background-color: black;">
+    <div class="glow-cursor"></div>
+    <div class="spotlight"></div>
+    
+
+    <div class="gridD">
+        <div></div>
+        <div>
+            <a href="D1.html">
+                <img src="../image/D1.JPG" alt="Image 1">
+            </a>
+        </div>
+        <div></div>
+        <div>
+            <a href="D2.html">
+                <img src="../image/D2.JPG" alt="Image 2">
+            </a>
+        </div>
+        <div></div>
+        <div>
+            <a href="D3.html">
+                <img src="../image/D4.JPG" alt="Image 4">
+            </a>
+        </div>
+        <div></div>
+        <div>
+            <a href="D5.html">
+                <img src="../image/D5.JPG" alt="Image 5">
+            </a>
+        </div>
+        <div></div>
+        <div></div>
+        <div>
+            <a href="D6.html">
+                <img src="../image/D6.JPG" alt="Image 6">
+            </a>
+        </div>
+        <div>
+            <a href="../index.html">
+                <img src="https://i.pinimg.com/originals/a5/a8/31/a5a8318c9abc50a09f836028a41c6985.gif" alt="Image 6" style="border-radius: 25%;">
+            </a>
+        </div>
+    </div>
+
+    <!--Written by GPT-->
+    <script>
+        const glowCursor = document.querySelector('.glow-cursor');
+        const spotlight = document.querySelector('.spotlight');
+
+        document.addEventListener('mousemove', (e) => {
+            // Move the glow cursor
+            glowCursor.style.left = `${e.clientX}px`;
+            glowCursor.style.top = `${e.clientY}px`;
+
+            // Move the spotlight
+            spotlight.style.left = `${e.clientX}px`;
+            spotlight.style.top = `${e.clientY}px`;
+        });
+    </script>
+</body>
+</html>

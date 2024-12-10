@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing In Space</title>
+    <link rel="stylesheet" href="../stylegallery.css"> 
+</head>
+<body>
+    <div class="glow-cursor"></div>
+    <div class="spotlight"></div>
+    <div class="grid-gallery">
+        <!-- <div style="width: 80vw; height: auto;" class="grid">
+            <div>
+                <img src="../image/G7.png" alt="Image 7">
+            </div>
+            <div>
+                <img src="../image/G8.png" alt="Image 8">
+            </div>
+            <div></div>
+            <div>
+                <img src="../image/G9.png" alt="Image 9">
+            </div>
+        </div> -->
+        <div style="width: 80vw;"></div>
+        <div class="bar-gallery">
+            <div><a href="../index.html" style="color: rgb(0, 0, 0);">HOMEPAGE</a></div>
+            <div><a href="Index.html" style="color: rgb(0, 0, 0);">Change Mode</a></div>
+            <div><a href="../Drawing/index.html" style="color: rgb(0, 0, 0);">Drawing</a></div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div>
+            <a href="G1.html">
+                <img src="../image/G1.png" alt="Image 1">
+            </a>
+        </div>
+        <div></div>
+        <div>
+            <a href="G2.html">
+                <img src="../image/G2.png" alt="Image 2">
+            </a>
+        </div>
+        <div>
+            <a href="G8.html">
+                <img src="../image/G8.png" alt="Image 8">
+            </a>
+        </div>
+
+        <div></div>
+        <div>
+            <a href="G4.html">
+                <img src="../image/G4.png" alt="Image 4">
+            </a>
+        </div>
+        <div>
+            <a href="G3.html">
+                <img src="../image/G3.png" alt="Image 3">
+            </a>
+        </div>
+        <div>
+            <a href="G5.html">
+                <img src="../image/G5.png" alt="Image 5">
+            </a>
+        </div>
+
+        <div>
+            <a href="G7.html">
+                <img src="../image/G7.png" alt="Image 7">
+            </a>
+        </div>
+        <div></div>
+        <div>
+            <a href="G6.html">
+                <img src="../image/G6.png" alt="Image 6">
+            </a>
+        </div>
+        <div>
+            <a href="G9.html">
+                <img src="../image/G9.png" alt="Image 9">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const glowCursor = document.querySelector('.glow-cursor');
+        const spotlight = document.querySelector('.spotlight');
+
+        document.addEventListener('mousemove', (e) => {
+            // Move the glow cursor
+            glowCursor.style.left = `${e.clientX}px`;
+            glowCursor.style.top = `${e.clientY}px`;
+
+            // Move the spotlight
+            spotlight.style.left = `${e.clientX}px`;
+            spotlight.style.top = `${e.clientY}px`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styledraw.css"> 
+</head>
+<body>
+    <div class="glow-cursor"></div>
+    <div class="spotlight"></div>
+    <div class="grid-draw">
+        <div>
+            <img src="https://cdn.myportfolio.com/07675f5e-2094-4851-9fce-7fdcb31dee4d/e7fade34-bc77-4fd7-a000-f107771db314_rw_1920.JPG?h=cb1d98463c21f2dd5514f7400901dbd0" alt="Image 1">
+        </div>
+        <div>
+            <div style="height: 10vh;"></div>
+            <div class="description1">
+                <p>Capsule of Time</p>
+                <p>November 2022</p>
+                <p>“The trees are about to show us how lovely it is to let things go.” —- Alicia Keys
+                    <p>Encapsulation is a series that explores the relationship between memories and time. Photos that represent significant personal memories of the artist were printed on fallen leaves. These memories are extremely intimate and unforgettable past experiences that become parts of the artist’s identity. However, it also entangled the artist from making changes and moving onward.</p>
+                    <p>As German novelist and poet Hermann Hesse once said, "Some of us think holding on makes us strong; but sometimes it is letting go." The creation process focuses on acknowledging the past and learning the beauty of letting the past become the past. Through symbolic subject matter, artists gain insights from the natural surroundings and gain courage in moving forward.</p>
+            </div>
+            <div style="height: 10vh;"></div>
+            <div class="description">
+                <a href="index.html" style="color: rgb(255, 255, 255);">Go Back</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const glowCursor = document.querySelector('.glow-cursor');
+        const spotlight = document.querySelector('.spotlight');
+
+        document.addEventListener('mousemove', (e) => {
+            // Move the glow cursor
+            glowCursor.style.left = `${e.clientX}px`;
+            glowCursor.style.top = `${e.clientY}px`;
+
+            // Move the spotlight
+            spotlight.style.left = `${e.clientX}px`;
+            spotlight.style.top = `${e.clientY}px`;
+        });
+    </script>
+</body>
+</html>

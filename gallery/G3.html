@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styledraw.css"> 
+</head>
+<body>
+    <div class="glow-cursor"></div>
+    <div class="spotlight"></div>
+    <div class="grid-draw">
+        <div>
+            <img src="https://cdn.myportfolio.com/07675f5e-2094-4851-9fce-7fdcb31dee4d/ef8f58da-81fa-47f1-b96a-8d8da8a8ec0b_rw_1920.jpeg?h=5ab7fca589e436f28170934369d92b5e" alt="Image 1">
+        </div>
+        <div>
+            <div style="height: 30vh;"></div>
+            <div class="description1">
+                <p>Carpenter Bee</p>
+                <p>Sept 2022</p>
+                <p>This artwork explores the intricate structure of the carpenter bee through the medium of wire. By meticulously studying the bee's orthography, the artist gained a deeper understanding of its form. Delicate lines of wire capture the airiness and lightness of the bee's wings, while thicker wire signifies the weight and energy of its body. The transparency of the sculpture reflects the bee's sneaky nature as a "nectar robber," symbolizing its ability to remain hidden while engaging in illicit actions. Through the interplay of wire thickness and intricate detailing, the artwork captures the unique traits and essence of the carpenter bee.</p>
+            </div>
+            <div style="height: 10vh;"></div>
+            <div class="description">
+                <a href="index.html" style="color: rgb(255, 255, 255);">Go Back</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const glowCursor = document.querySelector('.glow-cursor');
+        const spotlight = document.querySelector('.spotlight');
+
+        document.addEventListener('mousemove', (e) => {
+            // Move the glow cursor
+            glowCursor.style.left = `${e.clientX}px`;
+            glowCursor.style.top = `${e.clientY}px`;
+
+            // Move the spotlight
+            spotlight.style.left = `${e.clientX}px`;
+            spotlight.style.top = `${e.clientY}px`;
+        });
+    </script>
+</body>
+</html>

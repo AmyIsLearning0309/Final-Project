@@ -1,0 +1,193 @@
+body {
+    background-color: rgb(0, 0, 0);
+    cursor: none; /* Hide default cursor */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    line-height: 2;
+    color: white;
+    font-family: "cOdiNG";
+}
+
+@media only screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px;
+        padding: 10px;
+    }
+    .gridD {
+      grid-template-columns: 1fr !important;
+      gap: 10px;
+      padding: 10px;
+    }
+    .grid-draw {
+        grid-template-columns: 1fr !important;
+        gap: 10px;
+        padding: 10px;
+    }
+    .grid-gallery {
+        grid-template-columns: 1fr !important;
+        gap: 10px;
+        padding: 10px;
+    }
+    .bar-gallery {
+        width: 99px;
+        display: grid;
+        grid-template-rows: auto;
+        gap: 2px;
+        padding: 2px;
+        border: 1px white dotted;
+    }
+    .bar-gallery div {
+        width: 94px;
+        height: 18px;
+        padding: 2px;
+        border: 1px dotted white;
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+@font-face {
+    font-family: "cOdiNG";
+    src: url("assets/cOdiNGVF.ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("assets/Inter-VariableFont_opsz,wght.ttf");
+}
+
+.glow-cursor {
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(
+        circle closest-side, 
+        rgba(255, 255, 255, 0.5), 
+        rgba(255, 255, 255, 0)
+    );
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: transform 0.1s ease-out;
+}
+
+.spotlight {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(
+        circle closest-side, 
+        rgba(255, 255, 255, 0.4), 
+        rgba(255, 255, 255, 0)
+    );
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9998;
+    transition: transform 0.1s ease-out;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    padding: 20px;
+    border: #000000 solid 1px;
+}
+.grid div img {
+    width: 10vw;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    border: #000000 solid 1px;
+}
+
+.grid div {
+    text-align: center;
+    align-items: end;
+}
+.grid div img:hover {
+    filter: brightness(9);
+    transform: scale(1.1); /* Optional zoom effect */
+}
+
+.gridD {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    padding: 20px;
+}
+
+.gridD div img {
+    width: 10vw;
+    opacity: 0; /* Start fully transparent */
+    transform: scale(0.9); /* Slightly smaller initially */
+    pointer-events: none; /* Prevent hover issues */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.gridD div:hover img {
+    opacity: 1; /* Fully visible on hover */
+    transform: scale(1); /* Restore to normal size */
+}
+
+.gridD div a {
+    display: inline-block; /* Ensure the <a> tag wraps the image properly */
+    pointer-events: auto; /* Allow pointer events on the <a> tag */
+}
+
+.grid-draw {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    padding: 20px;
+}
+.grid-draw div img {
+    max-height: 90vh;
+    text-align: center;
+    pointer-events: none; /* Prevent hover issues */
+}
+.grid-draw div img {
+    text-align: center;
+}
+
+.bar-gallery {
+    width: 197px;
+    display: grid;
+    grid-template-rows: auto;
+    gap: 5px;
+    padding: 10px;
+    border: 1px white dotted;
+}
+  
+.bar-gallery div {
+    width: 187px;
+    height: 28px;
+    padding: 5px;
+    border: 1px dotted white;
+    text-align: center;
+}
+
+.changepage {
+    border: #ffffff solid 1px;
+    width: 10vw;
+
+}
+
+.changepage :hover {
+    box-shadow: #ffffff 1px 0 10px;
+}
+
+.grid-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  padding: 30px;
+}
+.bar-gallery a:link:hover {
+    color: #ffffff;
+    text-shadow: #ffffff 1px 0 10px;
+    transition-duration: 1s;
+  }

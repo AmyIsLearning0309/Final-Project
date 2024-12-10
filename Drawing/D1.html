@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styledraw.css"> 
+</head>
+<body>
+    <div class="glow-cursor"></div>
+    <div class="spotlight"></div>
+    <div class="grid-draw">
+        <div>
+            <img src="../image/D1.JPG" alt="Image 1">
+        </div>
+        <div>
+            <div style="height: 40vh;"></div>
+            <div class="description">
+                <p>Name: The Imaginary</p>
+                <p>Date: December 2021</p>
+                <p>Medium: Graphite</p>
+            </div>
+            <div style="height: 20vh;"></div>
+            <div class="description">
+                <a href="index.html" style="color: black;">Go Back</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const glowCursor = document.querySelector('.glow-cursor');
+        const spotlight = document.querySelector('.spotlight');
+
+        document.addEventListener('mousemove', (e) => {
+            // Move the glow cursor
+            glowCursor.style.left = `${e.clientX}px`;
+            glowCursor.style.top = `${e.clientY}px`;
+
+            // Move the spotlight
+            spotlight.style.left = `${e.clientX}px`;
+            spotlight.style.top = `${e.clientY}px`;
+        });
+    </script>
+</body>
+</html>
